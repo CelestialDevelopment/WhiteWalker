@@ -5,13 +5,8 @@ import OwnProps  from './LaunchList';
 
 let props=OwnProps;
 
-interface OwnProps{
-  id: number;
-}
 const LaunchListContainer = () => {
-  const { data, error, loading, refetch } = useLaunchListQuery({
-    variables: { id: String(id) },
-  });
+  const { data, error, loading } = useLaunchListQuery();
   if(loading){
     return <div> Loading..</div>;
   }
